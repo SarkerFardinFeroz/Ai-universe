@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai Universe</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+       
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="max-w-[1600px] mx-auto px-12">
+    <header>
+      <h1 class="#111111 text-center text-5xl font-semibold my-6">
+        AI Universe Hub
+      </h1>
+      <button
+        class="text-xl font-semibold text-white bg-[#fb6464] rounded-lg px-[1.75rem] py-4 mx-auto block my-6 hover:bg-[#cb5959] duration-300 ease-linear"
+      >
+        Sort By Date
+      </button>
+    </header>
+    <main>
+      <!-- tools section -->
+      <section>
+        <div
+          id="tools-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6"
+        ></div>
+        <div id="show-all-container" class="hidden">
+          <button
+            onclick="showAllHandle()"
+            class="btn btn-error text-white block mx-auto my-6"
+          >
+            Show All
+          </button>
+        </div>
+        <div id="modal-container" class="flex col-span-1 md:col-span-2"></div>
+      </section>
+    </main>
+    <!-- script -->
+    <script src="index.js"></script>
+  </body>
+</html>
