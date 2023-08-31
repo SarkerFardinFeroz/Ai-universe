@@ -85,9 +85,7 @@ const handleModal = async (tool) => {
                                 <h3 class="font-semibold text-2xl">Features</h3>
                                 <ul class="list-inside list-disc">
                                     <li>${cardInfo?.features[1].feature_name}</li>
-                                </ul>
                                     <li>${cardInfo?.features[2].feature_name}</li>
-                                </ul>
                                     <li>${cardInfo?.features[3].feature_name}</li>
                                 </ul>
                             </div>
@@ -102,9 +100,8 @@ const handleModal = async (tool) => {
                         </div>
                     </div>
                     <!-- right col -->
-                    <div class="p-7 rounded-lg border-[1px] border-[]">
-                        <img class="rounded-lg h-[340px] " src="${cardInfo?.image_link[0]
-                        }" alt="">
+                    <div class="p-7 rounded-lg border">
+                        <img class="rounded-lg h-[275px] " src="${cardInfo?.image_link[0]}" alt="">
                         <div class="max-w-[360px] mx-auto">
                             <h3 class="text-center mt-6 text-2xl font-bold mb-4 max-w-">${cardInfo.input_output_examples[1].input}</h3>
                         <p class="text-center">${cardInfo.input_output_examples[1].output}</p>
@@ -115,14 +112,20 @@ const handleModal = async (tool) => {
 
 </div>
       <!-- if there is a button in form, it will close the modal -->
-      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+      <button id="close-btn" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
     </div>
   </form>
 </dialog>
     `;
   modalContainer.appendChild(div);
+
   const modal = document.getElementById("my_modal_1");
   modal.showModal();
+  document.getElementById('close-btn').addEventListener('click',()=>{
+    modalContainer.innerHTML=''
+  })
+
+
 };
 
 loadContent();
